@@ -1,1 +1,66 @@
-/*styles*/
+/*imported fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* Get rid of the default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/*--------------HEADINGS-------------*/
+
+h1, 
+h2, 
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+header {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/person.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/person.jpg); /*We don't want a gradient.  We want just a color so we make it black to black.  We also don't want a pure black, so we will edit the transparency */
+    background-attachment: fixed;
+}
+
+header i {
+    font-size: 400%;
+    position: absolute; /*change this to relative to see whawt happens.  Since there is no positioned ancestor, i think position: absolute is positioning relative to the initial containng block (https://developer.mozilla.org/en-US/docs/Web/CSS/position) */
+    bottom: 0;
+    left: 50%;
+}
+
+.main-nav {
+    float: right; /*automatically makes it into a box element*/
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-left: 40px;
+}
+
+li:last-child {
+    margin-right: 15px;
+}
+
+
+
