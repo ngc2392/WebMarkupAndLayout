@@ -51,12 +51,25 @@ header {
     background-attachment: fixed;
 }
 
-header i {
+header .more-info-box {
+    border: 2px solid red;
     font-size: 400%;
     position: absolute;
     /*change this to relative to see whawt happens.  Since there is no positioned ancestor, i think position: absolute is positioning relative to the initial containng block (https://developer.mozilla.org/en-US/docs/Web/CSS/position) */
-    bottom: 0;
+    bottom: 25px;
     left: 50%;
+    padding-bottom:60px; /*To make the icon fit inside the border*/
+}
+
+header .more-info-box i {
+    /*display: block;*/ /*taking out padding-bottom and absolute but leaving display: block works*/
+    position: absolute;
+    left: 25%; /*50% doesn't work*/
+
+}
+
+header .more-info-box p {
+    font-size: 30%;
 }
 
 .hero-text-box {
