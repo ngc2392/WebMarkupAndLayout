@@ -101,7 +101,8 @@ li:last-child {
     margin-right: 15px;
 }
 
-.section-about {
+.section-about, 
+.section-overview {
     text-align: center;
 }
 
@@ -144,3 +145,15 @@ h2::before {
 }
 
 */
+
+/*https://www.w3schools.com/howto/howto_css_four_columns.asp*/
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 100%;
+}
