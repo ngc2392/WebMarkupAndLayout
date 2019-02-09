@@ -58,14 +58,16 @@ header .more-info-box {
     /*change this to relative to see whawt happens.  Since there is no positioned ancestor, i think position: absolute is positioning relative to the initial containng block (https://developer.mozilla.org/en-US/docs/Web/CSS/position) */
     bottom: 25px;
     left: 50%;
-    padding-bottom:60px; /*To make the icon fit inside the border*/
+    padding-bottom: 60px;
+    /*To make the icon fit inside the border*/
 }
 
 header .more-info-box i {
-    /*display: block;*/ /*taking out padding-bottom and absolute but leaving display: block works*/
+    /*display: block;*/
+    /*taking out padding-bottom and absolute but leaving display: block works*/
     position: absolute;
-    left: 25%; /*50% doesn't work*/
-
+    left: 25%;
+    /*50% doesn't work*/
 }
 
 header .more-info-box p {
@@ -85,9 +87,15 @@ header .more-info-box p {
 
 /*NAVGIATION*/
 
+
 .main-nav {
-    /*float: right;*/
+
+    /*get nav bar to the right*/
+    display: flex;
+    justify-content: flex-end;
+    
     /*automatically makes it into a box element*/
+    float: right;
     list-style: none;
     list-style-type: none;
     margin: 0;
@@ -95,24 +103,27 @@ header .more-info-box p {
     overflow: hidden;
     background-color: #333;
     position: sticky;
-    top: 0;
     width: 100%;
+    top: 0;
 }
 
 .main-nav li {
     /*display: inline;*/
+    border: 2px solid orange;
     float: left;
     /*margin-left: 40px;*/
 }
 
 .main-nav li a {
+    /*border: 2px solid red;*/
     display: block;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.main-nav a:hover:not(.active) { /* Select any elements we are hovering over and don't have .active class */
+.main-nav a:hover:not(.active) {
+    /* Select any elements we are hovering over and don't have .active class */
     background-color: #111;
 }
 
@@ -120,22 +131,59 @@ header .more-info-box p {
     background-color: #4CAF50;
 }
 
-
 li:last-child {
     /*margin-right: 15px;*/
 }
 
-.section-about, 
-.section-overview {
+.section-about, .section-overview {
     text-align: center;
 }
+
+.section-quote {
+    /*so we can position h3 using absolute.  Since its relative and we are not changing its positioning properties at all, this is in the same spot it would be if it was static*/
+    /*position: relative;*/
+    height: 50vh;
+    background-color: #8693AB;
+}
+
+.section-quote h3, 
+.section-quote p {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*
+.section-quote {
+    display: table; 
+    height: 50vh;
+    background-color: #8693AB;
+}
+
+.section-quote h3 {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 150%;
+    text-align: center;
+}
+
+.section-quote p {
+    display: table-cell;
+    vertical-align: bottom;
+}
+*/
 
 /*https://stackoverflow.com/questions/38212963/how-to-display-a-horizontal-line-before-and-after-a-heading-in-css*/
 
 /*https://stackoverflow.com/questions/16073323/horizontal-rule-line-beneath-each-h1-heading-in-css*/
 
 h2::after {
-    content: ' '; /* Whenever we do a psuedo after class, we need to specify its content */
+    content: ' ';
+    /* Whenever we do a psuedo after class, we need to specify its content */
     display: block;
     width: 100px;
     background-color: blue;
@@ -146,15 +194,18 @@ h2::after {
     /*padding-bottom: 30px;*/
     margin-bottom: 30px;
 }
+
 /*
 
 display: block;
     height: 2px;
     background-color: #e67e22;
     content: " "; /*When ever we do a psuedo after class, we need to specify its content.  In this case we don't want any words, so we put a space */
-    /*width: 100px;
+
+/*width: 100px;
     /*margin: 0 auto; /*Center it, just like before */
-  /*  margin-top: 30px;
+
+/*  margin-top: 30px;
 
 /*
 
@@ -172,9 +223,19 @@ h2::before {
 
 /*https://www.w3schools.com/howto/howto_css_four_columns.asp*/
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
 .column {
+    width: 25%;
+    border: 2px solid green;
+    margin: 0 5px;
+    /*
     float: left;
     width: 25%;
+    */
     /*padding: 10px;*/
 }
 
