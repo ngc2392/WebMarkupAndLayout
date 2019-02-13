@@ -45,14 +45,14 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/person.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/person.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/code_background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/code_background.jpg);
     /*We don't want a gradient.  We want just a color so we make it black to black.  We also don't want a pure black, so we will edit the transparency */
     background-attachment: fixed;
 }
 
 header .more-info-box {
-    /* border: 2px solid red; */
+    /*border: 2px solid red;*/
     font-size: 400%;
     position: absolute;
     /*change this to relative to see whawt happens.  Since there is no positioned ancestor, i think position: absolute is positioning relative to the initial containng block (https://developer.mozilla.org/en-US/docs/Web/CSS/position) */
@@ -132,58 +132,38 @@ li:last-child {
     margin-right: 15px;
 }
 
-.section-about, .section-overview {
+.software-development-section {
+    border: 2px solid red;
+}
+
+.software-development-section h2 {
     text-align: center;
 }
 
-.section-quote {
-    /*so we can position h3 using absolute.  Since its relative and we are not changing its positioning properties at all, this is in the same spot it would be if it was static*/
-    /*position: relative;*/
-    height: 50vh;
-    background-color: #8693AB;
-}
-
-.section-quote h3, 
-.section-quote p {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-/*https://stackoverflow.com/questions/38212963/how-to-display-a-horizontal-line-before-and-after-a-heading-in-css*/
-
-/*https://stackoverflow.com/questions/16073323/horizontal-rule-line-beneath-each-h1-heading-in-css*/
-
-h2::after {
-    content: ' ';
-    /* Whenever we do a psuedo after class, we need to specify its content */
-    display: block;
-    width: 100px;
-    background-color: blue;
-    /*border: 2px solid #d0d0d0;*/
-    margin: 0 auto;
-    margin-top: 30px;
-    height: 2px;
-    /*padding-bottom: 30px;*/
-    margin-bottom: 30px;
-}
-
-/*https://www.w3schools.com/howto/howto_css_four_columns.asp*/
-
-.row {
+.software-development-section-row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.column {
-    width: 25%;
-    border: 2px solid green;
-    margin: 0 5px;
+
+.box {
+    width: 33%;
+    height: 33%;
 }
 
-.wrapper {
-    width: 100%;
+
+.software-development-section-row .frontend-box {
+    background-color: black;
+  
+}
+
+.software-development-section-row .backend-box {
+    background-color: blue;
+  
+}
+
+.fa-html5, 
+.fa-css3-alt {
+    font-size: 500%;
 }
