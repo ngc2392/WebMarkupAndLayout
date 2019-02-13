@@ -146,6 +146,20 @@ li:last-child {
     justify-content: space-between;
 }
 
+.text-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    word-wrap: break-word; /*Stop text from overflowing outside the div*/
+
+}
+
+.text-row div {
+    border: 2px solid blue;
+    width: 33%;
+    height: 33%; /*auto*/
+    word-spacing: initial;
+}
 
 .box {
     width: 33%;
@@ -165,5 +179,8 @@ li:last-child {
 
 .fa-html5, 
 .fa-css3-alt {
+    position: relative;
+    left: 5%;
+    border: 2px solid brown;
     font-size: 500%;
 }
