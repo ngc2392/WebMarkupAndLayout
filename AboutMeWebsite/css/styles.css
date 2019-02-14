@@ -121,7 +121,7 @@ header .more-info-box p {
 
 .main-nav a:hover:not(.active) {
     /* Select any elements we are hovering over and don't have .active class */
-    background-color: #111;
+    background-color: 8693AB;
 }
 
 .active {
