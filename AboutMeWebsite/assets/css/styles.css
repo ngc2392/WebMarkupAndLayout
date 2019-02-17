@@ -262,3 +262,37 @@ footer {
     padding: 50px;
     font-size: 80%;
 }
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav li  {
+    /* border: 2px solid red; */
+    display: inline-block;
+}
+
+.footer-nav li a:link, 
+.footer-nav li a:visited {
+    text-decoration: none;
+    color: #888;
+    border-right: 1px solid blue;
+    /*top and bottom, right and left */
+    padding: 0px 5px;
+  
+}
+
+/* Remove right border from last link */
+.footer-nav li:last-child a {
+    border-right: none;
+}
+
+
+.footer-nav li a:hover, 
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+footer .copy-right {
+    text-align: center;
+}
