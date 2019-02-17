@@ -327,3 +327,39 @@ footer .copy-right {
 
 /* contact.html */
 
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button
+ {
+     display: block;
+
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #0cf;
+    color: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+
+}

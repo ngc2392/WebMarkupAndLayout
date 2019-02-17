@@ -22,16 +22,12 @@
 
                 /* overriding anything from styles.css*/
 
-                header {
+               main {
 
     background: #2c3e50; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2c3e50, #fd746c); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2c3e50, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-                }
-
-                .hero-text-box {
-                    top: 15%;
+    height: 100vh;
                 }
 
             </style>
@@ -42,8 +38,7 @@
     
             <!-- Contains entire site so that we can control how everything moves -->
             <div class="wrapper">
-    
-            <header>
+
                 <nav>
                     <ul class="main-nav">
                         <li><a href="index.html">Home</a></li>
@@ -52,7 +47,8 @@
                         <li><a href="#">Future</a></li>
                     </ul>
                 </nav>
-            </header>
+            
+                <main>
     
                 <div class="hero-text-box">
                     <h1>Contact Me</h1>
@@ -60,7 +56,7 @@
 
                 <div class="form-container">
 
-                    <form>
+                    <form id="contact">
                         <h3>Contact</h3>
                         <h4>I'll get back to you as soon as I can</h4>
 
@@ -85,9 +81,10 @@
                         </select>
 
                         <textarea placeholder="Type your Message Here .... " tabindex="5" required>
-                            
+
                         </textarea>
                        
+                        <button name="submit" type="submit" data-submit="...Sending...">Submit</button>
 
 
 
@@ -96,6 +93,8 @@
 
 
                 </div>
+
+                </main>
 
 
             <footer>
