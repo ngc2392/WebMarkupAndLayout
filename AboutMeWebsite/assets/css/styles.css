@@ -173,7 +173,7 @@ h2::after {
 
 /*https://www.w3schools.com/howto/howto_css_four_columns.asp*/
 
-.row {
+.overview-row {
     display: flex;
     justify-content: space-between;
 }
@@ -186,4 +186,79 @@ h2::after {
 
 .wrapper {
     width: 100%;
+}
+
+
+/*interests.html*/
+
+.software-development-section {
+    /* border: 2px solid red; */
+}
+
+.software-development-section h2 {
+    text-align: center;
+}
+
+
+/* once we git 768 pixels, this is ignored
+@media(min-width: 768px) {
+    .software-development-section .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+*/
+
+.software-development-section .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box {
+    border: 2px solid red;
+    flex-basis: 33%;
+    height: 50%;
+}
+
+.logo-box {
+    background-color: black;
+
+    border: 2px solid blue;
+    flex-basis: 33%;
+    height: 75%;
+}
+
+.text {
+    border: 2px solid orchid;
+}
+
+.software-development-section .row .frontend-box .logo-box {
+    background-color: bisque;
+}
+
+.software-development-section .row .backend-box .logo-box {
+    background-color: navajowhite;
+  
+}
+
+.logo-box object {
+    width: 100px;
+    height: 100px;
+    fill: white;
+}
+
+.fa-html5, 
+.fa-css3-alt {
+    position: relative;
+    left: 5%;
+    border: 2px solid brown;
+    font-size: 500%;
+}
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
 }
