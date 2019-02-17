@@ -265,10 +265,6 @@ footer {
 
 .footer-nav {
     list-style: none;
-    
-    /* get 'contact me' on same line as <ul> elements*/
-    display: inline-block;
-    
 }
 
 .row {
@@ -277,6 +273,7 @@ footer {
 
 .contact-me {
     position: absolute;
+    top: 0;
     right: 0;
 }
 
@@ -327,11 +324,6 @@ footer .copy-right {
     text-align: center;
 }
 
-.footer-nav .contact-me a {
-    /* border: 2px solid red; */
-    display: inline;
-    border-right: 2px solid red !important;
-}
 
-/*contact.html*/
+/* contact.html */
 
