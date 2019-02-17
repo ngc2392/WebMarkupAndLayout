@@ -265,7 +265,37 @@ footer {
 
 .footer-nav {
     list-style: none;
+    
+    /* get 'contact me' on same line as <ul> elements*/
+    display: inline-block;
+    
 }
+
+.row {
+    position: relative;
+}
+
+.contact-me {
+    position: absolute;
+    right: 0;
+}
+
+
+.contact-me a:link, 
+.contact-me a:visited {
+    text-decoration: none;
+    color: #888;
+    /*top and bottom, right and left */
+    padding: 0px 5px;
+  
+}
+
+.contact-me a:hover, 
+.contact-me a:active {
+    color: #ddd;
+}
+
+
 
 .footer-nav li  {
     /* border: 2px solid red; */
@@ -296,3 +326,12 @@ footer {
 footer .copy-right {
     text-align: center;
 }
+
+.footer-nav .contact-me a {
+    /* border: 2px solid red; */
+    display: inline;
+    border-right: 2px solid red !important;
+}
+
+/*contact.html*/
+
