@@ -328,11 +328,20 @@ footer .copy-right {
 /* contact.html */
 
 .form-container {
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+
+    border: 2px solid blue;
+
+
+
+
+    /*Center horizontally and vertically*/
+    position: absolute;
+    left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 400px;
+
 }
 
 #contact input[type="text"],
@@ -342,14 +351,37 @@ footer .copy-right {
 #contact textarea,
 #contact button
  {
+     border: 1px solid #CCC;
      display: block;
+     width: 100%;
+     padding: 10px;
 
 }
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover
+ {
+     -webkit-transition: border-color 0.3s ease-in-out;
+     transition: border-color 0.3s ease-in-out;
+     border: 1px solid red;
+
+}
+
+#contact textarea {
+    height: 75px;
+    resize: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 
 #contact {
     background: #F9F9F9;
     padding: 25px;
-    margin: 150px 0;
+    /* margin: 150px 0; */
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -361,5 +393,19 @@ footer .copy-right {
     color: #fff;
     margin: 0 0 5px;
     padding: 10px;
+}
 
+
+#contact button[type="submit"]:hover {
+   background: #09C;
+   -webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+
+}
+
+#contact input:focus, 
+#contact textarea:focus {
+	outline:0;
+	border:1px solid green;
 }
