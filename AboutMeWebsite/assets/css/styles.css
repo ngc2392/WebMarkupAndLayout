@@ -425,3 +425,42 @@ select {
 label {
     font-size: 75%;
 }
+
+
+
+
+
+/*-------------------------------------------*/
+
+.container-about {
+    display: flex;
+    height: 50vh;
+    border: 2px solid red;
+    /*flex-wrap: wrap;*/ /*Will make it go to new line if it runs out of space*/
+  }
+  
+  .column-right {
+    border: 2px solid green;
+    overflow-y: auto;
+    height: 100%;
+    width: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  .column-left {
+      background-color: red;
+      width:50%;
+  }
+  
+  .column-left img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .column-right {
+      /* background-color: blue; */
+     /* overflow: hidden;*/ /*hide the stuff that goes outside the div (because we have a fixed height on the column)*/
+    height: 250px;
+    overflow-y: auto;
+  }
