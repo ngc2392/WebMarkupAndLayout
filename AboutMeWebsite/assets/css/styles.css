@@ -354,8 +354,16 @@ footer .copy-right {
      border: 1px solid #CCC;
      display: block;
      width: 100%;
-     padding: 10px;
+     padding: 10px;  
 
+}
+
+#contact input, 
+textarea, 
+select, 
+button {
+     /*Top bottom, left right*/
+     margin: 10px 0;
 }
 
 #contact input[type="text"]:hover,
@@ -408,4 +416,12 @@ footer .copy-right {
 #contact textarea:focus {
 	outline:0;
 	border:1px solid green;
+}
+
+select {
+    display: block;
+}
+
+label {
+    font-size: 75%;
 }
