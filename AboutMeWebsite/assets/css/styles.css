@@ -132,8 +132,15 @@ li:last-child {
     margin-right: 15px;
 }
 
-.section-about, .section-overview {
+.section-about, .section-overview-home {
     text-align: center;
+}
+
+.section-overview-home {
+    background-color: #F2F4F3;
+    /*Use padding instead of margin so that the created space is filled with the background color*/
+    padding-bottom: 50px;
+
 }
 
 .section-quote {
@@ -195,7 +202,8 @@ h2::after {
     /* border: 2px solid red; */
 }
 
-.software-development-section h2 {
+.software-development-section h2, 
+.other-hobbies-section h2 {
     text-align: center;
 }
 
@@ -214,6 +222,9 @@ h2::after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+
 }
 
 .box {
