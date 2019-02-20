@@ -434,23 +434,28 @@ label {
 
 .container-about {
     display: flex;
-    height: 50vh;
+    height: 100vh;
     border: 2px solid red;
     /*flex-wrap: wrap;*/ /*Will make it go to new line if it runs out of space*/
   }
   
   .column-right {
+
+    /* background-color: blue; */
+     /* overflow: hidden;*/ /*hide the stuff that goes outside the div (because we have a fixed height on the column)*/
+     overflow-y: auto;
+
+
     border: 2px solid green;
-    overflow-y: auto;
     height: 100%;
-    width: 50%;
+    flex-basis: 50%;
     padding-left: 3%;
     padding-right: 3%;
   }
   
   .column-left {
       background-color: red;
-      width:50%;
+      flex-basis: 50%;
   }
   
   .column-left img {
@@ -458,9 +463,20 @@ label {
     height: 100%;
   }
   
-  .column-right {
-      /* background-color: blue; */
-     /* overflow: hidden;*/ /*hide the stuff that goes outside the div (because we have a fixed height on the column)*/
-    height: 250px;
-    overflow-y: auto;
+  .column-right .title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .column-right .job-title {
+      white-space: pre;
+  }
+
+  /*https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag*/
+  .column-right .col-text {
+      border: 2px solid green;
+      display: block;
+      width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
   }
