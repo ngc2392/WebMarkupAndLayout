@@ -475,17 +475,24 @@ label {
   }
   
   .column-right .title {
+    display: block;
     text-align: center;
     font-weight: bold;
   }
 
   .column-right .job-title {
+      /*so that we can add margin*/
+      display: inline-block;
       white-space: pre;
+      margin-bottom: 20px;
+
   }
 
   /*https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag*/
+  /*https://stackoverflow.com/questions/18225302/how-can-i-wrap-or-break-long-text-word-in-a-fixed-width-span/18225360*/
   .column-right .col-text {
       border: 2px solid green;
+      font-size: 75%;
       display: block;
       width: 100%;
       white-space: pre-wrap;
