@@ -182,11 +182,12 @@ h2::after {
 
 .overview-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .column {
-    width: 25%;
+    width: 23%;
     border: 2px solid green;
     margin: 0 5px;
 }
