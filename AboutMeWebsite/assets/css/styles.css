@@ -223,8 +223,7 @@ h2::after {
 .software-development-section .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /* justify-content: space-around; */
+    justify-content: space-around; 
     flex-wrap: wrap;
 
 }
@@ -253,8 +252,8 @@ h2::after {
 
 .software-development-section .row .backend-box .logo-box {
     background-color: navajowhite;
-  
 }
+
 
 .logo-box object {
     width: 100px;
@@ -269,6 +268,32 @@ h2::after {
     border: 2px solid brown;
     font-size: 500%;
 }
+
+
+
+.hobbies-container {
+    border: 2px solid brown;
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobbies-box {
+    border: 2px solid blue;
+    flex-basis: 30%;  
+}
+
+.hobbies-container img {
+    width: auto;
+    height: 250px;
+}
+
+
+
+
+
+
+
 
 footer {
     background-color: #333;
