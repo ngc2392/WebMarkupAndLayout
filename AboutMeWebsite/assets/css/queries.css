@@ -1,0 +1,15 @@
+/* No greater than 650px, no less than 300px */ 
+@media only screen and (max-width: 650px) and (min-width: 300px) {
+    .overview-row {
+        flex-direction: column;
+        align-content: center;
+
+    }
+
+    .column {
+        /* Controls height because flex-direction is column */
+        /* flex-basis: 50%; */
+        width: 50%;
+        margin-bottom: 5%;
+    }
+}
