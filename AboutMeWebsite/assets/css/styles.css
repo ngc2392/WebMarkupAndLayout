@@ -62,6 +62,13 @@ header .more-info-box {
     /*To make the icon fit inside the border*/
 }
 
+header .more-buttons {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 header .more-info-box i {
     /*display: block;*/
     /*taking out padding-bottom and absolute but leaving display: block works*/
