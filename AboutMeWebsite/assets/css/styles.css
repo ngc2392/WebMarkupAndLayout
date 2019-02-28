@@ -171,7 +171,7 @@ li:last-child {
 
 /*https://stackoverflow.com/questions/16073323/horizontal-rule-line-beneath-each-h1-heading-in-css*/
 
-h2::after {
+.horizontal-line-heading::after {
     content: ' ';
     /* Whenever we do a psuedo after class, we need to specify its content */
     display: block;
@@ -242,14 +242,19 @@ h2::after {
 }
 
 .logo-box {
-    background-color: black;
 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* center grid items along the column axis*/
+    align-items: center;
+
+    background-color: black;
     border: 2px solid blue;
     flex-basis: 33%;
     height: 75%;
 }
 
-.text {
+.software-dev-text {
     border: 2px solid orchid;
 }
 
@@ -293,6 +298,9 @@ h2::after {
 .hobbies-container img {
     width: 100%;
     height: 250px;
+}
+
+.movies-section h2 {
 }
 
   .movie-wrapper {
