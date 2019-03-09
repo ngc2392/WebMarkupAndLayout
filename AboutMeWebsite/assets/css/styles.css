@@ -45,8 +45,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/person.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/person.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/20180612_065056.jpg);
     /*We don't want a gradient.  We want just a color so we make it black to black.  We also don't want a pure black, so we will edit the transparency */
     background-attachment: fixed;
 }
