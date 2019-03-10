@@ -1,6 +1,8 @@
 /*imported fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
 /* Get rid of the default margin and padding */
 
 * {
@@ -302,6 +304,78 @@ li:last-child {
 .movies-section h2 {
 }
 
+.gallery_movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    justify-items: center;
+
+}
+
+.gallery_movies figure {
+    border: 2px solid red;
+}
+
+/* https://stackoverflow.com/a/38785145/9599554 */
+.gallery_movies figure img {
+    /* min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;  */
+    width: 250px;
+    height: 370px;
+}
+
+.tv_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+
+
+}
+
+.tv_gallery figure {
+    border: 2px solid rgb(233,171,88);
+    background-color: rgba(233,171,88,.5);
+    color: #d9480f;
+}
+
+
+.first {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.three {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.first img {
+    width: 100%;
+    height: 100%;
+}
+
+.two img {
+    width: 100%;
+    height: 100%;
+}
+
+.three img {
+    width: 100%;
+}
+/*
   .movie-wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -352,13 +426,41 @@ li:last-child {
   
 
 
+/* Future.html */
 
+.timeline {
+    border: 2px solid red;
+    background-color: #FFBA8F;
+}
 
+.timeline-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+.timeline-container .year-box .header {
+    font-family: 'Acme', sans-serif;
+    font-size: 250%;
+    text-align: center;
+}
 
+.career-box-wrapper {
+    display: grid;
+    grid-gap: 15px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
 
+.career-box {
+    background-color: olivedrab;
 
+}
 
+.career-box .header {
+    background-color: blue;
+    padding: 5%;
+}
 
 footer {
     background-color: #333;
