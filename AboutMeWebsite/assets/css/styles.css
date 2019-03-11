@@ -329,9 +329,7 @@ li:last-child {
 .tv_gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
-
-
+    grid-template-rows: 1fr 1fr;
 }
 
 .tv_gallery figure {
@@ -339,7 +337,6 @@ li:last-child {
     background-color: rgba(233,171,88,.5);
     color: #d9480f;
 }
-
 
 .first {
     grid-column-start: 1;
@@ -374,6 +371,7 @@ li:last-child {
 
 .three img {
     width: 100%;
+    /*Don't need a height because the image is already so big that it fits in the container*/
 }
 /*
   .movie-wrapper {
@@ -436,12 +434,21 @@ li:last-child {
 .timeline-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.year-box {
+    text-align: center;
 }
 
 .timeline-container .year-box .header {
     font-family: 'Acme', sans-serif;
     font-size: 250%;
     text-align: center;
+}
+
+.possible-careers-section {
+    background-color: #8AA1B1;
 }
 
 .career-box-wrapper {
@@ -460,7 +467,51 @@ li:last-child {
 .career-box .header {
     background-color: blue;
     padding: 5%;
+    text-align: center;
 }
+
+/* disney.html */
+
+.about-disney-section {
+    background-color: #B9D8C2;
+    text-align: center;
+    padding: 150px;
+}
+
+.resort-section {
+    background-color: #9AC2C9;
+}
+.resort-images-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.resort-images-wrapper div {
+    flex: 1 0 21%; /* explanation below */
+    margin: 5px;
+}
+
+.resort-images-wrapper div img {
+    width: 100%;
+    height: 250px;
+}
+
+.disney-places .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.disney-places .row img {
+    width: 100%;
+}
+
+.image-container img {
+    height: 50vh;
+}
+
+
+/* Footer */
 
 footer {
     background-color: #333;
