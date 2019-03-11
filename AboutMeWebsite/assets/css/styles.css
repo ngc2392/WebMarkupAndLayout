@@ -59,6 +59,7 @@ header .more-info-box {
     /*change this to relative to see whawt happens.  Since there is no positioned ancestor, i think position: absolute is positioning relative to the initial containng block (https://developer.mozilla.org/en-US/docs/Web/CSS/position) */
     bottom: 25px;
     left: 50%;
+    transform: translate(-50%);
     padding-bottom: 60px;
     /*To make the icon fit inside the border*/
 }
@@ -144,6 +145,11 @@ li:last-child {
     text-align: center;
 }
 
+.section-overview-home h2 {
+    margin-bottom: 15px;
+
+}
+
 .section-overview-home {
     background-color: #F2F4F3;
     /*Use padding instead of margin so that the created space is filled with the background color*/
@@ -198,7 +204,6 @@ li:last-child {
 
 .column {
     flex-basis: 21%;
-    border: 2px solid green;
 }
 
 .wrapper {
@@ -215,6 +220,12 @@ li:last-child {
 .software-development-section h2, 
 .other-hobbies-section h2 {
     text-align: center;
+    margin-bottom: 15px;
+}
+
+.other-hobbies-section {
+    background-color: #9AC2C9;
+    padding-top: 15px;
 }
 
 
@@ -237,7 +248,6 @@ li:last-child {
 }
 
 .box {
-    border: 2px solid red;
     flex-basis: 33%;
     height: 50%;
 }
@@ -250,13 +260,11 @@ li:last-child {
     align-items: center;
 
     background-color: black;
-    border: 2px solid blue;
     flex-basis: 33%;
     height: 75%;
 }
 
 .software-dev-text {
-    border: 2px solid orchid;
 }
 
 .software-development-section .row .frontend-box .logo-box {
@@ -278,21 +286,18 @@ li:last-child {
 .fa-css3-alt {
     position: relative;
     left: 5%;
-    border: 2px solid brown;
     font-size: 500%;
 }
 
 
 
 .hobbies-container {
-    border: 2px solid brown;
     display: flex; 
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .hobbies-box {
-    border: 2px solid blue;
     flex-basis: 30%;  
 }
 
@@ -302,6 +307,15 @@ li:last-child {
 }
 
 .movies-section h2 {
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    margin-bottom: 15px;
+}
+
+.movies-section {
+    background-color: #333333;
+    padding-bottom: 15px;
 }
 
 .gallery_movies {
@@ -313,7 +327,6 @@ li:last-child {
 }
 
 .gallery_movies figure {
-    border: 2px solid red;
 }
 
 /* https://stackoverflow.com/a/38785145/9599554 */
@@ -326,6 +339,18 @@ li:last-child {
     height: 370px;
 }
 
+.television_section h2 {
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    margin-bottom: 15px;
+}
+
+.television_section {
+    background-color: #8AA1B1;
+    padding-bottom: 15px;
+}
+
 .tv_gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -333,7 +358,6 @@ li:last-child {
 }
 
 .tv_gallery figure {
-    border: 2px solid rgb(233,171,88);
     background-color: rgba(233,171,88,.5);
     color: #d9480f;
 }
@@ -371,64 +395,19 @@ li:last-child {
 
 .three img {
     width: 100%;
-    /*Don't need a height because the image is already so big that it fits in the container*/
 }
-/*
-  .movie-wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-  }
-  
-  .movie-wrapper>div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
-  }
-  
-  .box1 {
-    
-    grid-column: 1 / 4;
-     
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-  
-  .box2 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  
-  .box3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  
-  /*
-  .box4 {
-     grid-column-start: 2;
-     grid-column-end: 4;
-     grid-row-start: 3;
-     grid-row-end: 4;
-  }
-  */
-  
-
 
 /* Future.html */
 
-.timeline {
+.timeline-section {
     border: 2px solid red;
+    padding-top: 15px;
     background-color: #FFBA8F;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .timeline-container {
@@ -448,24 +427,34 @@ li:last-child {
 }
 
 .possible-careers-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #8AA1B1;
 }
+
+.possible-careers-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 
 .career-box-wrapper {
     display: grid;
     grid-gap: 15px;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
 }
 
+
 .career-box {
-    background-color: olivedrab;
+    background-color: #E1BB80;
+    width: 320px;
 
 }
 
 .career-box .header {
-    background-color: blue;
+    background-color: #333333;
+    color: #FFF;
     padding: 5%;
     text-align: center;
 }
@@ -480,6 +469,10 @@ li:last-child {
 
 .resort-section {
     background-color: #9AC2C9;
+}
+
+.resort-section h2 {
+    text-align: center;
 }
 .resort-images-wrapper {
     display: flex;
@@ -510,6 +503,23 @@ li:last-child {
     height: 50vh;
 }
 
+.row .text {
+    position: relative;
+}
+
+.row .text h2 {
+    text-align: center;
+}
+
+.row .text .description {
+   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
 
 /* Footer */
 
@@ -559,7 +569,7 @@ footer {
 .footer-nav li a:visited {
     text-decoration: none;
     color: #888;
-    border-right: 1px solid blue;
+    border-right: 1px solid #FFF;
     /*top and bottom, right and left */
     padding: 0px 5px;
   
@@ -583,104 +593,110 @@ footer .copy-right {
 
 /* contact.html */
 
-.form-container {
-
-    border: 2px solid blue;
-
-
-
-
-    /*Center horizontally and vertically*/
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+ .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     
-    width: 400px;
-
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button
- {
-     border: 1px solid #CCC;
-     display: block;
-     width: 100%;
-     padding: 10px;  
-
-}
-
-#contact input, 
-textarea, 
-select, 
-button {
-     /*Top bottom, left right*/
-     margin: 10px 0;
-}
-
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover
- {
-     -webkit-transition: border-color 0.3s ease-in-out;
-     transition: border-color 0.3s ease-in-out;
-     border: 1px solid red;
-
-}
-
-#contact textarea {
-    height: 75px;
-    resize: none;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-
-#contact {
-    background: #F9F9F9;
-    padding: 25px;
-    /* margin: 150px 0; */
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-#contact button[type="submit"] {
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    background: #0cf;
-    color: #fff;
-    margin: 0 0 5px;
-    padding: 10px;
-}
-
-
-#contact button[type="submit"]:hover {
-   background: #09C;
-   -webkit-transition:background 0.3s ease-in-out;
-	-moz-transition:background 0.3s ease-in-out;
-	transition:background-color 0.3s ease-in-out;
-
-}
-
-#contact input:focus, 
-#contact textarea:focus {
-	outline:0;
-	border:1px solid green;
-}
-
-select {
-    display: block;
-}
-
-label {
-    font-size: 75%;
-}
+  }
+  
+  .col-1 {
+     background: -webkit-linear-gradient(to right, #2c3e50, #fd746c); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #2c3e50, #fd746c); 
+  
+  }
+  
+  
+  .col-1 h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    text-align: center;
+  }
+  
+  
+  
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact input[type="tel"],
+  #contact input[type="url"],
+  #contact textarea,
+  #contact button
+   {
+       border: 1px solid #CCC;
+       display: block;
+       width: 100%;
+       padding: 10px;  
+  
+  }
+  
+  #contact input, 
+  textarea, 
+  select, 
+  button {
+       /*Top bottom, left right*/
+       margin: 10px 0;
+  }
+  
+  #contact input[type="text"]:hover,
+  #contact input[type="email"]:hover,
+  #contact input[type="tel"]:hover,
+  #contact input[type="url"]:hover,
+  #contact textarea:hover
+   {
+       -webkit-transition: border-color 0.3s ease-in-out;
+       transition: border-color 0.3s ease-in-out;
+       border: 1px solid red;
+  
+  }
+  
+  #contact textarea {
+      height: 75px;
+      resize: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  
+  
+  #contact {
+      background: #F9F9F9;
+      padding: 25px;
+      /* margin: 150px 0; */
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  #contact button[type="submit"] {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: #0cf;
+      color: #fff;
+      margin: 0 0 5px;
+      padding: 10px;
+  }
+  
+  
+  #contact button[type="submit"]:hover {
+     background: #09C;
+     -webkit-transition:background 0.3s ease-in-out;
+      -moz-transition:background 0.3s ease-in-out;
+      transition:background-color 0.3s ease-in-out;
+  
+  }
+  
+  #contact input:focus, 
+  #contact textarea:focus {
+      outline:0;
+      border:1px solid green;
+  }
+  
+  select {
+      display: block;
+  }
+  
+  label {
+      font-size: 75%;
+  }
+  
 
 
 
@@ -691,7 +707,6 @@ label {
 .container-about {
     display: flex;
     height: 100vh;
-    border: 2px solid red;
     /*flex-wrap: wrap;*/ /*Will make it go to new line if it runs out of space*/
   }
   
@@ -701,8 +716,6 @@ label {
      /* overflow: hidden;*/ /*hide the stuff that goes outside the div (because we have a fixed height on the column)*/
      overflow-y: auto;
 
-
-    border: 2px solid green;
     height: 100%;
     flex-basis: 50%;
     padding-left: 3%;
@@ -736,7 +749,6 @@ label {
   /*https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag*/
   /*https://stackoverflow.com/questions/18225302/how-can-i-wrap-or-break-long-text-word-in-a-fixed-width-span/18225360*/
   .column-right .col-text {
-      border: 2px solid green;
       font-size: 75%;
       display: block;
       width: 100%;
