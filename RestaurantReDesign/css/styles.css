@@ -1,0 +1,63 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* { /*remove all margins and padding*/
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #555; /*text color*/ /*cmd E pops up color picker*/
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300; /*We can use 100, 300, and 400*/
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------- */
+/* HEADER START*/
+/* ----------------------------------------------- */
+
+/* Navigation */
+nav {
+    display: flex;
+    border: 2px solid green;
+}
+
+.main-nav-left {
+    flex-basis: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav-right {
+    flex-basis: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+.a {
+    
+    background-color: red;
+    width: 50%;
+    height: auto;
+}
+
+
+nav img {
+    width: 25%;
+    height: 5%;
+}
+
+
+/* Mobile navigation */
+
