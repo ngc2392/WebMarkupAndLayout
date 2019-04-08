@@ -6,10 +6,15 @@
         <meta name="description" content="Backyard Ale House website">
         <title>Backyard Ale House</title>
         <!-- 3rd party css files -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 
         <!-- local css files -->
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="css/queries.css">
+
+        
 
     </head>
 
@@ -17,24 +22,103 @@
         <header>
             <nav>
                 <ul class="main-nav-left">
-                    <li>Home</li>
-                    <li>Drinks</li>
-                    <li>Food</li>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="drinks.html">Drinks</a></li>
+                    <li><a href="food.html">Food</a></li>
                 </ul>
-                <!-- <div class="a"></div> -->
 
                 <img src="images/backyard_logo.png" />
 
                 <ul class="main-nav-right">
-                    <li>Catering</li>
-                    <li>Events</li>
-                    <li>Contact Us</li>
+                    <li><a class="active" href="catering.html">Catering</a></li>
+                    <li><a class="active" href="events.html">Events</a></li>
+                    <li><a class="active" href="contact.html">Contact Us</a></li>
                 </ul>
-
             </nav>
 
+            <div class="slideshow-container">
+
+                <div class="slide fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="bacon_melt.jpg">
+                    <div class="text">Caption Text</div>
+                </div>
+
+
+                <div class="slide fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="beef_ciabatta.jpg">
+                        <div class="text">Caption Text</div>
+                </div>
+
+
+                <div class="slide fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="black_blue_burger.jpg">
+                        <div class="text">Caption Text</div>
+                </div>
+
+                <i class="fas fa-arrow-left prev-arrow"></i>
+                <i class="fas fa-arrow-right next-arrow"></i>
+
+                
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+
+            </div>
+
+            <div class="hero-text"></div>
 
         </header>
-    </body>
+
+    <section>
+    </section>
+
+    <section class="food-grid">
+        <div>
+            <img src="bacon_melt.jpg" />
+        </div>
+        
+        <div>
+            <img src="beef_ciabatta.jpg" />
+        </div>
+        
+        <div>
+            <img src="black_blue_burger.jpg" />
+        </div>
+        
+        <div>
+            <img src="brunch.jpg" />
+        </div>
+
+        <div>
+            <img src="chicken_caesar_salad.jpg" />
+        </div>
+        
+        <div>
+            <img src="greek_burger.jpg" />
+        </div>
+        
+        <div>
+            <img src="wings.jpg" />
+        </div>
+        
+        <div>
+            <img src="turkey_club_wrap.jpg" /> 
+        </div>
+
+    </section>
+</body>
+
 
 </html>
