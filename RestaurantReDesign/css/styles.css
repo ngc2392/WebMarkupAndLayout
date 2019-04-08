@@ -52,11 +52,21 @@ header {
     height: 100vh;
 }
 
+header .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-weight: 700;
+
+}
+
 /* Navigation */
 nav {
     display: flex;
     height: 150px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     background-color: #222326;
     opacity: .7;
     /*This allows us to put the slider behind the nav bar because we remove the nav bar from the normal page flow*/
@@ -68,7 +78,7 @@ nav {
 
 /* select the direct children (level 1 children of the flex container */
 nav > * {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 }
 
 nav img {
@@ -119,15 +129,15 @@ nav img {
 .slideshow-container {
     position: relative;
     height: 100vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
  .slide {
     display: none;
     /* be as large as slideshow-container */
     height: 100%;
-      /* to make the images have a dark background.  Then put opacity on image */
-      background-color: #000; 
+    /* to make the images have a dark background.  Then put opacity on image */
+    background-color: #000; 
  }
 
  .slide > img {
@@ -190,8 +200,26 @@ nav img {
     top: 85%;
     left: 50%;
     transform: translate(-50%);
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
 
 
 
@@ -203,7 +231,7 @@ nav img {
 
 
 /* ----------------------------------------------- */
-/* INDEX.HTML BEGING */
+/* INDEX.HTML BEGIN */
 /* ----------------------------------------------- */
 
 .food-grid-section {
@@ -234,3 +262,26 @@ nav img {
 }
 
 
+/* ----------------------------------------------- */
+/* ABOUT SECTION */
+/* ----------------------------------------------- */
+
+.about-section {
+    padding-top: 2%;
+}
+
+.about-section h1 {
+    text-align: center;
+}
+
+.about-section div {
+    display: flex;
+    justify-content: center;
+}
+
+.about-section h3 {
+    text-align: center;
+    padding: 50px;
+    width: 75%;
+    /* border: 2px solid red; */
+}
