@@ -35,6 +35,11 @@ nav {
     display: flex;
     height: 150px;
     border: 2px solid green;
+    background-color: #222326;
+    opacity: .7;
+    /*This allows us to put the slider behind the nav bar because we remove the nav bar from the normal page flow*/
+    position: absolute;
+    width: 100%;
 }
 
 /* select the direct children (level 1 children of the flex container */
@@ -71,14 +76,16 @@ nav img {
 
 .main-nav-left li, 
 .main-nav-right li { 
+    
 }
 
 .main-nav-left li a, 
 .main-nav-right li a {
     display: block;
-    color: black;
+    color: #FFF;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Mobile navigation */
@@ -98,6 +105,7 @@ nav img {
  }
 
  .slide > img {
+     vertical-align: middle;
      /* fill up .slide */
      height: 100%;
  }
@@ -108,6 +116,11 @@ nav img {
      position: absolute;
      top: 50%;
      transform: translateY(-50%);
+     padding: 16px;
+     transition: 0.6s ease;
+     
+
+
  }
 
  .slideshow-container .prev-arrow {
@@ -117,6 +130,23 @@ nav img {
 .slideshow-container .next-arrow {
     right: 0;
 }
+
+.slideshow-container .prev-arrow:hover, 
+.slideshow-container .next-arrow:hover {
+   background-color: rgba(0,0,0,0.8);
+   border-radius: 0 3px 3px 0;
+   color: #FFF;
+
+}
+
+.dots {
+    position: absolute;
+    left: 0;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 
 
 
@@ -130,19 +160,19 @@ nav img {
 /* INDEX.HTML BEGING */
 /* ----------------------------------------------- */
 
-.food-grid {
+.food-grid-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: 250px;
 }
 
-.food-grid > div {
+.food-grid-section > div {
     /* height: 250px; */
     background-color: #000; 
     overflow: hidden;
 }
 
-.food-grid > div > img {
+.food-grid-section > div > img {
     height: 100%;
     width: 100%;
     opacity: .7;
@@ -151,7 +181,7 @@ nav img {
  
 }
 
-.food-grid > div > img:hover {
+.food-grid-section > div > img:hover {
     opacity: 1;
     transform: scale(1.03);
 }

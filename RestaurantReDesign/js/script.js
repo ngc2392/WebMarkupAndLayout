@@ -1,8 +1,8 @@
-if($('.body').hasClass('home-page-body')) {
+if($('body').hasClass('home-page-body')) {
 
 
 
-    
+
 
 
 }
