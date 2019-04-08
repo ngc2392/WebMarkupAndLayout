@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900');
+
 /* ----------------------------------------------- */
 /* BASIC SETUP */
 /* ----------------------------------------------- */
@@ -21,6 +23,26 @@ body {
 }
 
 /* ----------------------------------------------- */
+/* HEADINGS */
+/* ----------------------------------------------- */
+
+h1, 
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    /* font-size will be 48px */
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+
+}
+
+
+/* ----------------------------------------------- */
 /* HEADER START*/
 /* ----------------------------------------------- */
 
@@ -40,6 +62,8 @@ nav {
     /*This allows us to put the slider behind the nav bar because we remove the nav bar from the normal page flow*/
     position: absolute;
     width: 100%;
+    /*make nav bar on top of .slideshow-container*/
+    z-index: 99999;
 }
 
 /* select the direct children (level 1 children of the flex container */
@@ -102,12 +126,17 @@ nav img {
     display: none;
     /* be as large as slideshow-container */
     height: 100%;
+      /* to make the images have a dark background.  Then put opacity on image */
+      background-color: #000; 
  }
 
  .slide > img {
      vertical-align: middle;
      /* fill up .slide */
      height: 100%;
+     width: 100%;
+     opacity: .5;
+   
  }
 
  .slideshow-container .prev-arrow, 
@@ -139,12 +168,29 @@ nav img {
 
 }
 
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover, 
+.dots .active {
+    background-color: #717171;
+}
+
 .dots {
     position: absolute;
     left: 0;
     top: 85%;
     left: 50%;
     transform: translate(-50%);
+    border: 2px solid blue;
 }
 
 
@@ -168,6 +214,7 @@ nav img {
 
 .food-grid-section > div {
     /* height: 250px; */
+    /* to make the images have a dark background.  Then put opacity on image */
     background-color: #000; 
     overflow: hidden;
 }
