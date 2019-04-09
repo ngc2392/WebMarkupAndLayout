@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+a {
+    /* border: 2px solid blue; */
+}
+
 html, 
 body {
     background-color: #fff;
