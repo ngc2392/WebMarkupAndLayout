@@ -323,3 +323,50 @@ nav img {
 .card .content {
     padding: 5%;
 }
+
+
+/* ----------------------------------------------- */
+/* CONTACT.HTML BEGIN */
+/* ----------------------------------------------- */
+
+.contact-page-body header {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/outside_view.jpg);
+    /*We don't want a gradient.  We want just a color so we make it black to black.  We also don't want a pure black, so we will edit the transparency */
+    background-attachment: fixed;
+
+}
+
+.contact-page-body .hero-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 2px solid red;
+    color: #FFF;
+}
+
+.contact-page-body h1 {
+    
+}
+
+
+.contact-page-body .hero-text-wrapper .hero-text {
+    width: 75%;
+    border: 2px solid blue;
+}
+
+.contact-page-body .hero-text-wrapper .hero-text h1 {
+   text-align: center;
+   margin-bottom: 2%;
+}
+
+.contact-page-body .fa-arrow-down {
+    position: absolute;
+    bottom: 2%;
+    border: 2px solid blue;
+    font-size: 250%;
+    left: 50%;
+}
