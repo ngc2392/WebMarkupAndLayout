@@ -266,9 +266,7 @@ nav img {
 }
 
 
-/* ----------------------------------------------- */
-/* ABOUT SECTION */
-/* ----------------------------------------------- */
+/* ------------- ABOUT SECTION ------------- */
 
 .about-section {
     padding-top: 2%;
@@ -288,4 +286,40 @@ nav img {
     padding: 50px;
     width: 75%;
     /* border: 2px solid red; */
+}
+
+/* ------------- WHAT WE OFFER SECTION ------------- */
+
+.what-we-offer-section {
+    background-color: #f4f4f4;
+    padding: 2% 0;
+}
+
+.what-we-offer-section h1 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 0 27%;
+    background-color: #FFF;
+}
+
+.card img {
+    width: 100%;
+    /* https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin0-auto */
+    /* https://stackoverflow.com/a/25569436/9599554 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card .content {
+    padding: 5%;
 }
