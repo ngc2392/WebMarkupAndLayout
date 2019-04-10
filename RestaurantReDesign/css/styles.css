@@ -311,6 +311,7 @@ nav img {
     background-color: #FFF;
 }
 
+/* flex box is taking care of some of the sizing of the image for us (implicitily) */
 .card img {
     width: 100%;
     /* https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin0-auto */
@@ -373,6 +374,12 @@ nav img {
     border: 2px solid blue;
     padding-top: 2%;
     padding-bottom: 2%;
+    background-color: #54494B;
+
+}
+
+.contact-form-section h3 {
+
 }
 
 /* center grid container */
@@ -386,11 +393,11 @@ nav img {
     /*media query just go to one column*/
     grid-template-columns: 200px 200px;
     grid-gap: 16px;
-    
 }
 
 .form-container label {
     font-size: 75%;
+    color: #FFFFFF;
 }
 
 .form-container input {
@@ -398,3 +405,22 @@ nav img {
     padding: 10px;
 }
 
+.form-container .button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px;
+    text-align: center;
+    border: 5px solid #B17461;
+    color: #B17461;
+    font-size: 30px;
+    background-image: linear-gradient(#B17461, #B17461);
+    background-position: 50% 50%;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+}
+
+.button:hover {
+    background-size: 100% 100%;
+    color: #fff;
+}
