@@ -344,7 +344,6 @@ nav img {
     justify-content: center;
     align-items: center;
     height: 100%;
-    border: 2px solid red;
     color: #FFF;
 }
 
@@ -355,18 +354,47 @@ nav img {
 
 .contact-page-body .hero-text-wrapper .hero-text {
     width: 75%;
-    border: 2px solid blue;
+    /* center h1 tag and span */
+    text-align: center;
 }
 
 .contact-page-body .hero-text-wrapper .hero-text h1 {
-   text-align: center;
    margin-bottom: 2%;
 }
 
 .contact-page-body .fa-arrow-down {
     position: absolute;
     bottom: 2%;
-    border: 2px solid blue;
     font-size: 250%;
     left: 50%;
 }
+
+.contact-form-section {
+    border: 2px solid blue;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* center grid container */
+.form-container-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    display: grid;
+    /*media query just go to one column*/
+    grid-template-columns: 200px 200px;
+    grid-gap: 16px;
+    
+}
+
+.form-container label {
+    font-size: 75%;
+}
+
+.form-container input {
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+
