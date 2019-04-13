@@ -76,6 +76,7 @@ header .hero-times-wrapper {
     color: #FFF;
     font-weight: 700;
     width: 50%;
+    grid-gap: 5%;
 }
 
 header .hero-times-wrapper .hero-times-bar {
@@ -148,6 +149,40 @@ nav img {
 }
 
 /* Mobile navigation */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* positioned relative to the view port */
+    position: fixed;
+    /* fill up entire view port */
+    height: 0;
+    width: 100%;
+    /*put above .slide-container*/
+    z-index: 5;
+    border: 2px solid red;
+    color: #FFF;
+    background-color: rgba(0,0,0,0.9);
+    transition: 0.5s;
+    /*if we don't have this, the .mobile-nav items will show even if the height of the element is 0 */
+    overflow-y: hidden;
+}
+
+.mobile-nav-icon {
+    position: absolute;
+    font-size: 150%;
+    color: white;
+    right: 5%;
+    margin-top: 20px;
+    cursor: pointer;
+    display: none;
+    /* put it above .slide-container */
+    z-index: 2000;
+}
+
+
+
 
 /* Slide Show */
 

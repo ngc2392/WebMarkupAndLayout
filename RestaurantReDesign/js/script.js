@@ -1,3 +1,13 @@
+// mobile navigation
+document.getElementsByClassName("mobile-nav-icon")[0].addEventListener('click', function(e) {
+    // returns array of DOM elements 
+    document.getElementsByClassName("mobile-nav")[0].style.height="100%";
+});
+
+
+// clicking anywhere besides the links will close the nav 
+
+
 if ($('body').hasClass('home-page-body')) {
 
     var slideIndex = 1;

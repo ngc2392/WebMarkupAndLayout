@@ -1,0 +1,15 @@
+@media only screen and (max-width: 767px) {
+
+}
+
+/* These rules will apply when the width of the device or browser is less or ewqual to 480px */
+/*msall phones*/
+@media only screen and (max-width: 480px) {
+    nav {
+        display: none;
+    }
+
+    .mobile-nav-icon {
+        display: block;
+    }
+}
