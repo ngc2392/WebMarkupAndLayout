@@ -51,9 +51,9 @@ h1 {
 /* ----------------------------------------------- */
 
 header {
-    background-size: cover;
+    /* background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100vh; */
 }
 
 header .hero-title {
@@ -63,7 +63,28 @@ header .hero-title {
     transform: translate(-50%, -50%);
     color: #FFF;
     font-weight: 700;
+}
 
+header .hero-times-wrapper {
+    border: 2px solid blue;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-weight: 700;
+    width: 50%;
+}
+
+header .hero-times-wrapper .hero-times-bar {
+    font-weight: 900;
+}
+
+header .hero-times-wrapper .hero-times-bar h4,
+header .hero-times-wrapper .hero-times-kitchen h4 {
+    text-align: center;
 }
 
 /* Navigation */
@@ -130,7 +151,7 @@ nav img {
 
 /* Slide Show */
 
-.slideshow-container {
+header .slideshow-container {
     position: relative;
     height: 100vh;
     /* border: 2px solid red; */
