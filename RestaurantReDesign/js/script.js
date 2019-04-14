@@ -1,8 +1,29 @@
 // mobile navigation
 document.getElementsByClassName("mobile-nav-icon")[0].addEventListener('click', function(e) {
+      
     // returns array of DOM elements 
     document.getElementsByClassName("mobile-nav")[0].style.height="100%";
+
+    // disable vertical scrolling
+    document.getElementsByTagName('body')[0].className += ' disable-scroll';
 });
+
+
+// Clicking anywhere on the div, except the links, will close the mobiel nav window
+
+        document.getElementsByClassName("mobile-nav")[0].addEventListener('click', function (e) {
+           console.log("clicked somewhere on mobile nav");
+           console.log(  document.getElementsByTagName('body')[0].classList);
+           
+           // e.target returns the DOM element 
+           console.log(e.target.nodeName);
+
+           if(e.target.nodeName != 'A') {
+            document.getElementsByClassName("mobile-nav")[0].style.height="0";
+           }
+
+        });
+
 
 
 // clicking anywhere besides the links will close the nav 

@@ -99,7 +99,7 @@ nav {
     position: absolute;
     width: 100%;
     /*make nav bar on top of .slideshow-container*/
-    z-index: 99999;
+    z-index: 99998;
 }
 
 /* select the direct children (level 1 children of the flex container */
@@ -150,6 +150,7 @@ nav img {
 
 /* Mobile navigation */
 .mobile-nav {
+    /*will be changed to flex when .mobile-nav-icon is clicked*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,14 +160,31 @@ nav img {
     /* fill up entire view port */
     height: 0;
     width: 100%;
-    /*put above .slide-container*/
-    z-index: 5;
+    /*put above .slide-container (and above <nav>.  we gave it a z-index of one higher of nav*/
+    z-index: 99999;
     border: 2px solid red;
     color: #FFF;
     background-color: rgba(0,0,0,0.9);
     transition: 0.5s;
     /*if we don't have this, the .mobile-nav items will show even if the height of the element is 0 */
     overflow-y: hidden;
+}
+
+.mobile-nav a {
+    margin: 15px 0;
+}
+
+.mobile-nav i {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+
+}
+
+.disable-scroll {
+    overflow: hidden;
 }
 
 .mobile-nav-icon {
