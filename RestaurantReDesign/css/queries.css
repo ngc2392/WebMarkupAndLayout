@@ -12,4 +12,8 @@
     .mobile-nav-icon {
         display: block;
     }
+
+    header .hero-times-wrapper {
+        width: 75%;
+    }
 }

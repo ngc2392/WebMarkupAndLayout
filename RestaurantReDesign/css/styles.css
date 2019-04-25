@@ -63,10 +63,12 @@ header .hero-title {
     transform: translate(-50%, -50%);
     color: #FFF;
     font-weight: 700;
+    width: 100%;
+    text-align: center;
+    border: 2px solid red;
 }
 
 header .hero-times-wrapper {
-    border: 2px solid blue;
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,6 +88,7 @@ header .hero-times-wrapper .hero-times-bar {
 header .hero-times-wrapper .hero-times-bar h4,
 header .hero-times-wrapper .hero-times-kitchen h4 {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Navigation */
@@ -126,11 +129,14 @@ nav img {
 
 /*https://stackoverflow.com/questions/42144413/centering-a-specific-element-among-others-with-flexbox*/
 .main-nav-left {
-    margin-right: auto;
+    flex-grow: 1;
+    /* border: 2px solid blue; */
 }
 
 .main-nav-right {
-    margin-left: auto;
+    /* justify-content: flex-end; */
+    flex-grow: 1;
+    /* border: 2px solid red; */
 }
 
 
@@ -227,6 +233,12 @@ header .slideshow-container {
    
  }
 
+ .slide .text {
+     position: absolute;
+     bottom: 0;
+     border: 2px solid red;
+ }
+
  .slideshow-container .prev-arrow, 
  .slideshow-container .next-arrow {
      cursor: pointer;
@@ -274,8 +286,7 @@ header .slideshow-container {
 
 .dots {
     position: absolute;
-    left: 0;
-    top: 85%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%);
     /* border: 2px solid blue; */
@@ -298,9 +309,6 @@ header .slideshow-container {
     from {opacity: .4} 
     to {opacity: 1}
   }
-
-
-
 
 
 /* ----------------------------------------------- */
@@ -328,6 +336,8 @@ header .slideshow-container {
 .food-grid-section > div > img {
     height: 100%;
     width: 100%;
+    /* https://stackoverflow.com/a/30794589/9599554 */
+    object-fit: cover;
     opacity: .7;
     transform: scale(1.15);
     transition: opacity 0.5s, transform 0.5s;
@@ -344,6 +354,7 @@ header .slideshow-container {
 
 .about-section {
     padding-top: 2%;
+    background-color: #91C7B1;
 }
 
 .about-section h1 {
@@ -384,6 +395,8 @@ header .slideshow-container {
     flex: 0 0 27%;
     background-color: #FFF;
 }
+
+
 
 /* flex box is taking care of some of the sizing of the image for us (implicitily) */
 .card img {
