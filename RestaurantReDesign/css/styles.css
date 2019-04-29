@@ -105,6 +105,7 @@ nav {
     z-index: 99998;
 }
 
+
 /* select the direct children (level 1 children of the flex container */
 nav > * {
     /* border: 2px solid pink; */
@@ -412,6 +413,86 @@ header .slideshow-container {
     padding: 5%;
 }
 
+
+/* ----------------------------------------------- */
+/* FOOD.HTML BEGIN */
+/* ----------------------------------------------- */
+
+
+/* Don't need the nav bar over the slideshow */
+.menu-page-body nav {
+    position: relative;
+}
+
+.menu-page-body section h1 {
+    text-align: center;
+}
+
+/* all <div> elements with class "menu-container". */
+/* https://css-tricks.com/difference-explicit-implicit-grids/ */
+/* https://www.w3.org/TR/css-grid-1/ */
+.menu-page-body div.menu-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px;
+    grid-auto-rows: 150px;
+    grid-gap: 10px;
+    border: 2px solid red;
+}
+.menu-page-body .menu-items-container .menu-item {
+    border: 2px solid pink;
+    /*positon .price relative to .menu-item*/
+    position: relative;
+}
+
+.menu-page-body .menu-items-container .menu-item .description {
+    margin-top: 15px;
+}
+
+.menu-page-body .menu-items-container .menu-item .price {
+    /*get it to the right side of its container (.menu-item) */
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 2px solid blue;
+}
+
+.mac-n-cheese-your-way-section > div:first-of-type {
+    padding: 0 15%;
+    text-align: center;
+}
+
+.mac-n-cheese-your-way-section .types {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+}
+
+.mac-n-cheese-your-way-section .types > span {
+    align-self: center;
+}
+
+.mac-n-cheese-your-way-section .types div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid burlywood;
+}
+
+.salads-section .extra {
+    display: flex;
+    justify-content: center;
+}
+
+.salads-section .extra div {
+    border: 2px solid #91C7B1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    position: relative;
+    justify-content: center;
+    grid-column-gap: 15px;
+    
+}
 
 /* ----------------------------------------------- */
 /* CONTACT.HTML BEGIN */
