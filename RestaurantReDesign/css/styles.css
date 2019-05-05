@@ -537,6 +537,31 @@ header .slideshow-container {
 }
 
 /* ----------------------------------------------- */
+/* EVENTS.HTML BEGIN */
+/* ----------------------------------------------- */
+
+/* include <nav> back into the normal flow  */
+.events-page-body nav {
+    position: relative;
+}
+
+/* need the > */
+.daily-happy-hour-section h1, 
+.daily-happy-hour-section > div:first-of-type {
+    text-align: center;
+}
+
+
+.events-page-body .weekly-specials-section .row {
+    display: flex;
+}
+
+.events-page-body .weekly-specials-section .row > div {
+    flex: 0 0 33.3333%;
+}
+
+
+/* ----------------------------------------------- */
 /* CONTACT.HTML BEGIN */
 /* ----------------------------------------------- */
 
