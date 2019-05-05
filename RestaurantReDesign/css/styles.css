@@ -418,6 +418,15 @@ header .slideshow-container {
 /* FOOD.HTML BEGIN */
 /* ----------------------------------------------- */
 
+.menu-page-body section:nth-of-type(odd) {
+    background-color: #E6EFE9;
+}
+
+.menu-page-body section:nth-of-type(even) {
+    background-color: #EFECCA;
+}
+
+
 
 /* Don't need the nav bar over the slideshow */
 .menu-page-body nav {
@@ -456,6 +465,10 @@ header .slideshow-container {
     right: 0;
     bottom: 0;
     border: 2px solid blue;
+}
+
+.mac-n-cheese-your-way-section {
+    background-color: #FFFFFF;
 }
 
 .mac-n-cheese-your-way-section > div:first-of-type {
@@ -589,7 +602,8 @@ header .slideshow-container {
     display: grid;
     /*media query just go to one column*/
     grid-template-columns: 200px 200px;
-    grid-gap: 16px;
+    grid-row-gap: 25px;
+    grid-column-gap: 45px;
 }
 
 .form-container label {
@@ -600,11 +614,12 @@ header .slideshow-container {
 .form-container input {
     border: 1px solid #CCC;
     padding: 10px;
+    border-radius: 25px;
 }
 
-.form-container .button {
+.button {
     position: relative;
-    display: inline-block;
+    width: 15%;
     padding: 15px 15px;
     text-align: center;
     border: 5px solid #B17461;
@@ -615,6 +630,8 @@ header .slideshow-container {
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background-size .5s, color .5s;
+
+    margin: 0 auto;
 }
 
 .button:hover {
