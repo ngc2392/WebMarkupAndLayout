@@ -459,6 +459,54 @@ blockquote cite:before {
     content: "\2013";
 }
 
+.footer-wrapper footer {
+    background-color: #3A405A;
+    color: #FFF;
+}
+
+.footer-wrapper footer .social-media-row {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper footer .social-media-row > i{
+   margin: 0 10px;
+   font-size: 150%;
+}
+
+.footer-wrapper footer .row  {
+    display: flex;
+    align-items: center;
+}
+
+.footer-wrapper footer .row .footer-nav {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-left: 15px; 
+}
+
+.footer-wrapper footer .row .address {
+    margin-left: auto;
+}
+
+.footer-wrapper footer .footer-nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.footer-wrapper footer .footer-nav a:hover {
+    color: #EACB00;
+    text-decoration: none;
+}
+
+.footer-wrapper footer .social-media-row .social-media > i {
+    font-size: 150%;
+    margin: 0 15px;
+}
+
+
 /* ----------------------------------------------- */
 
 /* DRINKS.HTML BEGIN */
@@ -625,6 +673,11 @@ blockquote cite:before {
     background-color: #FFFFFF;
 }
 
+.mac-n-cheese-your-way-section > p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .mac-n-cheese-your-way-section>div:first-of-type {
     padding: 0 15%;
     text-align: center;
@@ -691,7 +744,7 @@ blockquote cite:before {
 .scroll-to {
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: 10%;
     z-index: 5;
 }
 
@@ -858,7 +911,7 @@ blockquote cite:before {
 /* only want level one children */
 
 .daily-happy-hour-section>div:nth-of-type(4)>div:first-of-type>div {
-    padding: 0px 20px;
+    padding: 0px 3px;
 }
 
 .daily-happy-hour-section .menu-item .name {

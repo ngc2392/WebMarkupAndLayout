@@ -1,91 +1,86 @@
 @media only screen and (max-width: 1000px) {
-    
-    .late-night-happy-hour-section > div {
+    .late-night-happy-hour-section>div {
         flex: 0 0 100%;
         justify-content: center;
     }
-    
 }
 
 @media only screen and (max-width: 767px) {
     .menu-page-body div.menu-items-container {
         grid-template-columns: 1fr;
     }
-
     .drinks-page-body .beer-grid {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 25px;
     }
-
     .food-grid-section {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     .what-we-offer-section .cards-container .card {
         flex: 0 0 45%;
         margin: 10px 10px;
     }
-
-    .testimonials .row > blockquote{
+    .testimonials .row>blockquote {
         flex: 0 0 80%;
     }
-
     .events-page-body .weekly-specials-section .row>div {
         flex: 0 0 50%;
     }
-
-
 }
 
 /* These rules will apply when the width of the device or browser is less or ewqual to 480px */
+
 /*msall phones*/
+
 @media only screen and (max-width: 480px) {
     nav {
         display: none;
     }
-
     .mobile-nav-icon {
         display: block;
     }
-
     header .hero-times-wrapper {
         width: 75%;
     }
-
     .food-grid-section {
         grid-template-columns: 1fr 1fr;
     }
-
     .drinks-page-body .beer-grid {
         grid-template-columns: 1fr;
     }
-
     .menu-page-body .dippers-and-sides-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
-    .menu-page-body .dippers-and-sides-container .dippers-column > span {
+    .menu-page-body .dippers-and-sides-container .dippers-column>span {
         display: inline-block;
         margin-bottom: 50px;
     }
-
     .menu-page-body .dippers-and-sides-container .sides-column h3 {
         grid-template-columns: 1fr;
-        margin-top:50px;
+        margin-top: 50px;
     }
-
     .events-page-body .weekly-specials-section .row>div {
         flex: 0 0 100%;
         margin: 10px 0;
     }
-
     .catering-options-section .grid {
         grid-template-columns: 1fr;
     }
-
-    .catering-options-section .grid > div {
+    .catering-options-section .grid>div {
         margin-top: 30px;
     }
+    /* select the menu grid  */
+    .daily-happy-hour-section>div:nth-of-type(4)>div:first-of-type {
+        grid-template-columns: 1fr;
+    }
 
+    /* select the menu items */
+    .daily-happy-hour-section>div:nth-of-type(4)>div:first-of-type>div {
+        margin-bottom: 25px;
+    }
+
+    .late-night-happy-hour-section img {
+        display: none;
+    }
 }
