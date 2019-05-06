@@ -545,10 +545,105 @@ header .slideshow-container {
     position: relative;
 }
 
-/* need the > */
+.dash {
+    border: 1px solid red;
+    width: 120px;
+    height: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.daily-happy-hour-section {
+    background-color: #EFECCA;
+    padding-bottom: 50px;
+}
+
+/* need the >.  If not, it will look for any first-of-type div (can be levels deep) */
 .daily-happy-hour-section h1, 
-.daily-happy-hour-section > div:first-of-type {
+.daily-happy-hour-section > div:nth-of-type(2) {
     text-align: center;
+}
+
+/* select the one level above grid container */
+.daily-happy-hour-section > div:nth-of-type(4) {
+    background-color: #FFF;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.daily-happy-hour-section > div:nth-of-type(4) h3 {
+    text-align: center;
+}
+
+/* select the menu grid  */
+.daily-happy-hour-section > div:nth-of-type(4) > div:first-of-type {
+    display: grid;
+    grid-column-gap: 10%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.daily-happy-hour-section .menu-item .name {
+    font-weight: 700;
+    text-align: center;
+}
+
+.daily-happy-hour-section .description {
+    /* margin-left: 10px; */
+}
+
+.daily-happy-hour-section .menu-item .price {
+    font-size: 80%;
+    float: right;
+}
+
+.late-night-happy-hour-section {
+    background-color: #0FC0DB;
+}
+
+.late-night-happy-hour-section > div:first-of-type {
+    text-align: center;
+}
+
+.late-night-happy-hour-section .row {
+    display: flex;
+    height: 50vh;
+   
+}
+
+.late-night-happy-hour-section .row div > div:first-child {
+    border: 2px solid red;
+}
+
+.late-night-happy-hour-section .shot {
+    display: flex;
+    flex: 0 0 50%;
+    /* of its container (parent) */
+    height: 100%;
+}
+
+.late-night-happy-hour-section .shot div {
+    align-self: center;
+}
+
+/* https://stackoverflow.com/a/22429853/9599554 */
+.late-night-happy-hour-section .shot img{
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.late-night-happy-hour-section .beer {
+    display: flex;
+    /* of its container (parent) */
+    height: 100%;
+    flex: 0 0 50%;
+    border: 2px solid blue;
+}
+
+/* https://stackoverflow.com/a/22429853/9599554 */
+.late-night-happy-hour-section .beer img {
+    margin-left: auto;    
 }
 
 
