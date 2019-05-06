@@ -40,22 +40,21 @@
                 <span data-scrollTo="blt-section">B.L.T</span>
                 <span data-scrollTo="vegetarian-section">Vegetarian</span>
                 <span data-scrollTo="fish-section">Fish</span>
+                <span data-scrollTo="dippers-and-sides-section">dippers/sides</span>
             </div>
         
 
         </div>
 
-
-        
         <!-- Will take up whole screen -->
         <div class="mobile-nav">
             <i class="fas fa-times"></i>
-            <a class="mobile-nav-active">Home</a>
-            <a>Drinks</a>
-            <a>Food</a>
-            <a>Catering</a>
-            <a>Events</a>
-            <a>Contact Us</a>
+            <a href="index.html">Home</a>
+            <a href="drinks.html">Drinks</a>
+            <a class="mobile-nav-active" href="food.html">Food</a>
+            <a href="catering.html">Catering</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact Us</a>
         </div>
 
         <a class="mobile-nav-icon"><i id="mobile-icon" class="fas fa-bars"></i></a>
@@ -64,17 +63,17 @@
 
             <nav>
                 <ul class="main-nav-left">
-                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="drinks.html">Drinks</a></li>
-                    <li><a href="food.html">Food</a></li>
+                    <li><a class="active"  href="food.html">Food</a></li>
                 </ul>
 
                 <img src="images/backyard_logo.png" />
 
                 <ul class="main-nav-right">
-                    <li><a class="active" href="catering.html">Catering</a></li>
-                    <li><a class="active" href="events.html">Events</a></li>
-                    <li><a class="active" href="contact.html">Contact Us</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -274,10 +273,11 @@
 
             <h1>Beef</h1>
 
-            <span>A 6-oz hand-formed all beef burger, flame grilled and served with a crisp kosher pickle spear on the side.  Add bacon: 2</span>
-
-            <span>Add Cheese (American, Cheddar, Copper, Crumbled Blue, Feta, Provolone, Swiss, Mozzarella, Muenster) 1</span>
-
+            <div class="extra-desc">
+                <div>A 6-oz hand-formed all beef burger, flame grilled and served with a crisp kosher pickle spear on the side.  Add bacon: 2</div>
+                <div>Add Cheese (American, Cheddar, Copper, Crumbled Blue, Feta, Provolone, Swiss, Mozzarella, Muenster) 1</div>
+            </div>
+            
             <div class="menu-items-container">
                 <div class="menu-item">
                     <div class="name">JUST-A-BURGER</div>
@@ -357,7 +357,11 @@
 
         <section class="pork-section">
             <h1>Pork</h1>
-            <span>All sandwiches are served with a crisp kosher pickle spear on the side</span>
+            
+            <div class="extra-desc">
+                <span>All sandwiches are served with a crisp kosher pickle spear on the side</span>
+            </div>
+           
             
             <div class="menu-items-container">
                 <div class="menu-item">
@@ -387,9 +391,11 @@
 
                 <h1>Birds</h1>
 
-                <span>A 6-oz hand-formed all beef burger, flame grilled and served with a crisp kosher pickle spear on the side.  Add bacon: 2</span>
-
-                <span>Add Cheese (American, Cheddar, Copper, Crumbled Blue, Feta, Provolone, Swiss, Mozzarella, Muenster) 1</span>
+                <div class="extra-desc">
+                    <span>A 6-oz hand-formed all beef burger, flame grilled and served with a crisp kosher pickle spear on the side.  Add bacon: 2</span>
+                    <span>Add Cheese (American, Cheddar, Copper, Crumbled Blue, Feta, Provolone, Swiss, Mozzarella, Muenster) 1</span>
+                </div>
+                
 
                 <div class="menu-items-container">
                     <div class="menu-item">
@@ -491,6 +497,8 @@
 
         <section class="blt-section">
             <h1>B.L.T</h1>
+
+
             <span>All sandwiches are served with a crisp kosher pickle spear on the side.</span>
        
             <div class="menu-items-container">

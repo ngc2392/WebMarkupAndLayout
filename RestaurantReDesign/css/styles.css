@@ -14,7 +14,6 @@
 }
 
 a {
-    /* border: 2px solid blue; */
 }
 
 html, body {
@@ -69,7 +68,6 @@ header .hero-title {
     font-weight: 700;
     width: 100%;
     text-align: center;
-    border: 2px solid red;
 }
 
 header .hero-times-wrapper {
@@ -99,7 +97,7 @@ header .hero-times-wrapper .hero-times-bar h4, header .hero-times-wrapper .hero-
 nav {
     display: flex;
     height: 150px;
-    /* border: 2px solid green; */
+
     background-color: #222326;
     opacity: .7;
     /*This allows us to put the slider behind the nav bar because we remove the nav bar from the normal page flow*/
@@ -112,7 +110,6 @@ nav {
 /* select the direct children (level 1 children of the flex container */
 
 nav>* {
-    /* border: 2px solid pink; */
 }
 
 nav img {
@@ -134,13 +131,11 @@ nav img {
 
 .main-nav-left {
     flex-grow: 1;
-    /* border: 2px solid blue; */
 }
 
 .main-nav-right {
     /* justify-content: flex-end; */
     flex-grow: 1;
-    /* border: 2px solid red; */
 }
 
 .main-nav-left li, .main-nav-right li {}
@@ -166,9 +161,8 @@ nav img {
     /* fill up entire view port */
     height: 0;
     width: 100%;
-    /*put above .slide-container (and above <nav>.  we gave it a z-index of one higher of nav*/
+    /*put above .slide-container (and above <nav>.  we gave it a z-index of one higher of nav.  Also put above hero-text on drinks.html*/
     z-index: 99999;
-    border: 2px solid red;
     color: #FFF;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s;
@@ -180,8 +174,14 @@ nav img {
     color: #000;
 }
 
+.active, .mobile-nav-active {
+    border-bottom: 2px solid #EACB00;
+}
+
 .mobile-nav a {
     margin: 15px 0;
+    text-decoration: none;
+    color: #FFF;
 }
 
 .mobile-nav i {
@@ -211,7 +211,6 @@ nav img {
 header .slideshow-container {
     position: relative;
     height: 100vh;
-    /* border: 2px solid red; */
 }
 
 .slide {
@@ -233,7 +232,6 @@ header .slideshow-container {
 .slide .text {
     position: absolute;
     bottom: 0;
-    border: 2px solid red;
 }
 
 .slideshow-container .prev-arrow, .slideshow-container .next-arrow {
@@ -243,6 +241,7 @@ header .slideshow-container {
     transform: translateY(-50%);
     padding: 16px;
     transition: 0.6s ease;
+    z-index: 5;
 }
 
 .slideshow-container .prev-arrow {
@@ -279,7 +278,6 @@ header .slideshow-container {
     bottom: 5%;
     left: 50%;
     transform: translate(-50%);
-    /* border: 2px solid blue; */
 }
 
 /* Fading animation */
@@ -369,7 +367,6 @@ header .slideshow-container {
     text-align: center;
     padding: 50px;
     width: 75%;
-    /* border: 2px solid red; */
 }
 
 /* ------------- WHAT WE OFFER SECTION ------------- */
@@ -383,6 +380,7 @@ header .slideshow-container {
     margin-bottom: 5%;
     text-align: center;
 }
+
 
 .cards-container {
     display: flex;
@@ -410,6 +408,57 @@ header .slideshow-container {
     padding: 5%;
 }
 
+/* Testimonials */
+
+.testimonials h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonials .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonials .row > blockquote {
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+    flex: 0 0 30%;
+}
+
+/* https://stackoverflow.com/a/34708570/9599554 */ 
+.testimonials .row > blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+
+.testimonials .row > blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
+
 /* ----------------------------------------------- */
 
 /* DRINKS.HTML BEGIN */
@@ -429,6 +478,15 @@ header .slideshow-container {
 .drinks-page-body header .hero-title {
     position: absolute;
     color: #FFF;
+    z-index: 99998;
+}
+
+.drinks-page-body header .hero-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transition: translate(-65%, -50%);
+    color: #FFF;
     z-index: 5555555;
 }
 
@@ -446,27 +504,57 @@ header .slideshow-container {
     z-index: 20000000000;
 }
 
-.drinks-page-body .beer-grid {
-    display: flex;
-    flex-wrap: wrap;
+.drinks-page-body h1 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.drinks-page-body .beer-grid>div {
-    flex: 0 0 33.3333%;
+.drinks-page-body .beer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+}
+
+.drinks-page-body .beer-grid > div {
+    /* border-bottom: 2px solid #000;
+    border-right: 2px solid #000; */
     background-color: #FFF;
 }
 
-.drinks-page-body .beer-grid>div .header {
-    display: flex;
-}
-
-.drinks-page-body .beer-grid>div .info {
-    display: flex;
-}
-
-.drinks-page-body .beer-grid>div:hover {
+.drinks-page-body .beer-grid > div:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+.drinks-page-body .beer-grid > div .header {
+    display: flex;
+}
+
+.drinks-page-body .beer-grid > div .header .name {
+    font-weight: 900;
+}
+
+.drinks-page-body .beer-grid > div .header .type {
+    font-size: 65%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.drinks-page-body .beer-grid > div .info {
+    display: flex;
+    font-size: 65%;
+    /* how to put space between items according to the flexbox spec (level 1) */
+    margin: 0 -8px;
+}
+
+.drinks-page-body .beer-grid > div .info > div {
+    margin: 0 8px;
+}
+
+.drinks-page-body .beer-grid > div .description {
+    margin-top: 15px;
+}
+
 
 /* ----------------------------------------------- */
 
@@ -483,19 +571,28 @@ header .slideshow-container {
 }
 
 /* Don't need the nav bar over the slideshow */
-
 .menu-page-body nav {
     position: relative;
 }
 
+.menu-page-body section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .menu-page-body section h1 {
     text-align: center;
+    margin-bottom: 15px;
+}
+
+.menu-page-body section .extra-desc {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* all <div> elements with class "menu-container". */
-
 /* https://css-tricks.com/difference-explicit-implicit-grids/ */
-
 /* https://www.w3.org/TR/css-grid-1/ */
 
 .menu-page-body div.menu-items-container {
@@ -505,11 +602,9 @@ header .slideshow-container {
     grid-auto-rows: 150px;
     /*switch to auto?*/
     grid-gap: 10px;
-    border: 2px solid red;
 }
 
 .menu-page-body .menu-items-container .menu-item {
-    border: 2px solid pink;
     /*positon .price relative to .menu-item*/
     position: relative;
 }
@@ -524,7 +619,6 @@ header .slideshow-container {
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 2px solid blue;
 }
 
 .mac-n-cheese-your-way-section {
@@ -539,17 +633,15 @@ header .slideshow-container {
 .mac-n-cheese-your-way-section .types {
     display: flex;
     justify-content: center;
-    border: 2px solid red;
 }
 
-.mac-n-cheese-your-way-section .types>span {
+.mac-n-cheese-your-way-section .types > span {
     align-self: center;
 }
 
 .mac-n-cheese-your-way-section .types div {
     display: flex;
     flex-direction: column;
-    border: 2px solid burlywood;
 }
 
 .salads-section .extra {
@@ -559,14 +651,12 @@ header .slideshow-container {
 
 .salads-section .dressings {
     font-size: 75%;
-    border: 2px solid red;
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
 }
 
 .salads-section .extra div {
-    border: 2px solid #91C7B1;
     display: grid;
     grid-template-columns: auto 1fr;
     position: relative;
@@ -578,6 +668,10 @@ header .slideshow-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+}
+
+.menu-page-body .dippers-and-sides-container h3 {
+    margin-bottom: 20px;
 }
 
 .dippers-and-sides-section .dippers-and-sides-container .dippers-column .dippers {
@@ -599,7 +693,6 @@ header .slideshow-container {
     right: 0;
     bottom: 0;
     z-index: 5;
-    border: 2px solid red;
 }
 
 .scroll-to div:first-of-type {
@@ -637,6 +730,72 @@ header .slideshow-container {
     height: 245px;
 }
 
+
+/* ----------------------------------------------- */
+
+/* CATERING.HTML BEGIN */
+
+/* ----------------------------------------------- */
+
+.catering-page-body .hero-title {
+    z-index: 1;
+}
+
+.catering-page-body .hero-image {
+    background-color: #000;
+    height: 100vh;
+}
+
+.catering-page-body .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    opacity: .5;
+}
+
+.catering-options-section {
+    background-color: #B7A196;
+}
+
+.catering-options-section h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.catering-options-section > div:nth-of-type(2) > div {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.catering-options-section .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFF;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+   
+}
+
+.catering-options-section .box {
+    text-align: center;
+}
+
+.catering-options-section .box .image-container {
+    /* width: 100%; */
+    height: 150px;
+}
+
+.catering-options-section .box .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
 /* ----------------------------------------------- */
 
 /* EVENTS.HTML BEGIN */
@@ -668,7 +827,6 @@ header .slideshow-container {
 
 .daily-happy-hour-section h1, .daily-happy-hour-section>div:nth-of-type(2) {
     text-align: center;
-    border: 2px solid pink;
 }
 
 /* target div right below <h1> */
@@ -731,21 +889,20 @@ header .slideshow-container {
 
 .late-night-happy-hour-section .row {
     display: flex;
+    flex-wrap: wrap;
     /* need to give explicit height for us to be able to give height percentages to its children */
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 /* target both prices in the row */
 
 .late-night-happy-hour-section .row div>div:first-child>div:first-child {
     font-size: 450%;
-    border: 2px solid red;
 }
 
 /* target the description in the row */
 
 .late-night-happy-hour-section .row div>div:first-child>div:nth-child(2) {
-    border: 2px solid green;
     text-align: center;
 }
 
@@ -754,7 +911,6 @@ header .slideshow-container {
     flex: 0 0 50%;
     /* of its container (parent) */
     height: 100%;
-    border: 2px solid yellow;
 }
 
 .late-night-happy-hour-section .shot div {
@@ -773,7 +929,6 @@ header .slideshow-container {
     /* of its container (parent) */
     height: 100%;
     flex: 0 0 50%;
-    border: 2px solid blue;
 }
 
 .late-night-happy-hour-section .beer div {
@@ -786,8 +941,14 @@ header .slideshow-container {
     margin-left: auto;
 }
 
+.events-page-body .weekly-specials-section h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .events-page-body .weekly-specials-section .row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .events-page-body .weekly-specials-section .row>div {
@@ -817,8 +978,6 @@ header .slideshow-container {
     color: #FFF;
 }
 
-.contact-page-body h1 {}
-
 .contact-page-body .hero-text-wrapper .hero-text {
     width: 75%;
     /* center h1 tag and span */
@@ -837,13 +996,16 @@ header .slideshow-container {
 }
 
 .contact-form-section {
-    border: 2px solid blue;
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: #54494B;
 }
 
-.contact-form-section h3 {}
+.contact-form-section h3 {
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 25px;
+}
 
 /* center grid container */
 
@@ -866,7 +1028,6 @@ header .slideshow-container {
 }
 
 .form-container input {
-    border: 1px solid #CCC;
     padding: 10px;
     border-radius: 25px;
 }
@@ -885,6 +1046,7 @@ header .slideshow-container {
     background-repeat: no-repeat;
     transition: background-size .5s, color .5s;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .button:hover {

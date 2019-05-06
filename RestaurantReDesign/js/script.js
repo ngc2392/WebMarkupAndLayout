@@ -77,6 +77,20 @@ if ($('body').hasClass('home-page-body')) {
        // console.log(this);
     
     });
+
+    // https://stackoverflow.com/questions/15843581/how-to-correctly-iterate-through-getelementsbyclassname
+    // https://stackoverflow.com/questions/2125714/explanation-of-slice-call-in-javascript
+    // https://stackoverflow.com/questions/34518321/iterate-through-all-available-getelementsbyclassname-nodes
+
+    var dots = document.getElementsByClassName('dots');
+
+    console.log(dots.length);
+
+    for(var i = 0; i < dots.length; i++) {
+        console.log("hi", dots[i]);
+    }
+
+   
     
 
     function currentSlide(n) {
