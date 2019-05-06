@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900');
-
 /* ----------------------------------------------- */
+
 /* BASIC SETUP */
+
 /* ----------------------------------------------- */
 
-* { /*remove all margins and padding*/
+* {
+    /*remove all margins and padding*/
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -15,24 +17,26 @@ a {
     /* border: 2px solid blue; */
 }
 
-html, 
-body {
+html, body {
     background-color: #fff;
-    color: #555; /*text color*/ /*cmd E pops up color picker*/
+    color: #555;
+    /*text color*/
+    /*cmd E pops up color picker*/
     font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 300; /*We can use 100, 300, and 400*/
+    font-weight: 300;
+    /*We can use 100, 300, and 400*/
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
 
 /* ----------------------------------------------- */
+
 /* HEADINGS */
+
 /* ----------------------------------------------- */
 
-h1, 
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -42,12 +46,12 @@ h1 {
     font-size: 240%;
     word-spacing: 4px;
     letter-spacing: 1px;
-
 }
 
-
 /* ----------------------------------------------- */
+
 /* HEADER START*/
+
 /* ----------------------------------------------- */
 
 header {
@@ -85,13 +89,13 @@ header .hero-times-wrapper .hero-times-bar {
     font-weight: 900;
 }
 
-header .hero-times-wrapper .hero-times-bar h4,
-header .hero-times-wrapper .hero-times-kitchen h4 {
+header .hero-times-wrapper .hero-times-bar h4, header .hero-times-wrapper .hero-times-kitchen h4 {
     text-align: center;
     margin-bottom: 15px;
 }
 
 /* Navigation */
+
 nav {
     display: flex;
     height: 150px;
@@ -105,9 +109,9 @@ nav {
     z-index: 99998;
 }
 
-
 /* select the direct children (level 1 children of the flex container */
-nav > * {
+
+nav>* {
     /* border: 2px solid pink; */
 }
 
@@ -116,11 +120,9 @@ nav img {
     height: 75%;
     /*center image*/
     margin: auto;
-    
 }
 
-.main-nav-left, 
-.main-nav-right {
+.main-nav-left, .main-nav-right {
     flex-basis: 30%;
     list-style: none;
     display: flex;
@@ -129,6 +131,7 @@ nav img {
 }
 
 /*https://stackoverflow.com/questions/42144413/centering-a-specific-element-among-others-with-flexbox*/
+
 .main-nav-left {
     flex-grow: 1;
     /* border: 2px solid blue; */
@@ -140,14 +143,9 @@ nav img {
     /* border: 2px solid red; */
 }
 
+.main-nav-left li, .main-nav-right li {}
 
-.main-nav-left li, 
-.main-nav-right li { 
-    
-}
-
-.main-nav-left li a, 
-.main-nav-right li a {
+.main-nav-left li a, .main-nav-right li a {
     display: block;
     color: #FFF;
     padding: 14px 16px;
@@ -156,6 +154,7 @@ nav img {
 }
 
 /* Mobile navigation */
+
 .mobile-nav {
     /*will be changed to flex when .mobile-nav-icon is clicked*/
     display: flex;
@@ -171,10 +170,14 @@ nav img {
     z-index: 99999;
     border: 2px solid red;
     color: #FFF;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s;
     /*if we don't have this, the .mobile-nav items will show even if the height of the element is 0 */
     overflow-y: hidden;
+}
+
+.mobile-nav-icon:not([class^=".home-page-body"]) {
+    color: #000;
 }
 
 .mobile-nav a {
@@ -185,9 +188,6 @@ nav img {
     position: absolute;
     top: 0;
     right: 0;
-
-
-
 }
 
 .disable-scroll {
@@ -206,9 +206,6 @@ nav img {
     z-index: 2000;
 }
 
-
-
-
 /* Slide Show */
 
 header .slideshow-container {
@@ -217,43 +214,38 @@ header .slideshow-container {
     /* border: 2px solid red; */
 }
 
- .slide {
+.slide {
     display: none;
     /* be as large as slideshow-container */
     height: 100%;
     /* to make the images have a dark background.  Then put opacity on image */
-    background-color: #000; 
- }
+    background-color: #000;
+}
 
- .slide > img {
-     vertical-align: middle;
-     /* fill up .slide */
-     height: 100%;
-     width: 100%;
-     opacity: .5;
-   
- }
+.slide>img {
+    vertical-align: middle;
+    /* fill up .slide */
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
 
- .slide .text {
-     position: absolute;
-     bottom: 0;
-     border: 2px solid red;
- }
+.slide .text {
+    position: absolute;
+    bottom: 0;
+    border: 2px solid red;
+}
 
- .slideshow-container .prev-arrow, 
- .slideshow-container .next-arrow {
-     cursor: pointer;
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     padding: 16px;
-     transition: 0.6s ease;
-     
+.slideshow-container .prev-arrow, .slideshow-container .next-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    transition: 0.6s ease;
+}
 
-
- }
-
- .slideshow-container .prev-arrow {
+.slideshow-container .prev-arrow {
     left: 0;
 }
 
@@ -261,12 +253,10 @@ header .slideshow-container {
     right: 0;
 }
 
-.slideshow-container .prev-arrow:hover, 
-.slideshow-container .next-arrow:hover {
-   background-color: rgba(0,0,0,0.8);
-   border-radius: 0 3px 3px 0;
-   color: #FFF;
-
+.slideshow-container .prev-arrow:hover, .slideshow-container .next-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 3px 3px 0;
+    color: #FFF;
 }
 
 .dot {
@@ -280,8 +270,7 @@ header .slideshow-container {
     transition: background-color 0.6s ease;
 }
 
-.dot:hover, 
-.dots .active {
+.dot:hover, .dots .active {
     background-color: #717171;
 }
 
@@ -294,31 +283,42 @@ header .slideshow-container {
 }
 
 /* Fading animation */
+
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+}
 
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
 
 /* ----------------------------------------------- */
+
 /* HEADER END */
-/* ----------------------------------------------- */
-
 
 /* ----------------------------------------------- */
+
+/* ----------------------------------------------- */
+
 /* INDEX.HTML BEGIN */
+
 /* ----------------------------------------------- */
 
 .food-grid-section {
@@ -327,14 +327,14 @@ header .slideshow-container {
     grid-auto-rows: 250px;
 }
 
-.food-grid-section > div {
+.food-grid-section>div {
     /* height: 250px; */
     /* to make the images have a dark background.  Then put opacity on image */
-    background-color: #000; 
+    background-color: #000;
     overflow: hidden;
 }
 
-.food-grid-section > div > img {
+.food-grid-section>div>img {
     height: 100%;
     width: 100%;
     /* https://stackoverflow.com/a/30794589/9599554 */
@@ -342,14 +342,12 @@ header .slideshow-container {
     opacity: .7;
     transform: scale(1.15);
     transition: opacity 0.5s, transform 0.5s;
- 
 }
 
-.food-grid-section > div > img:hover {
+.food-grid-section>div>img:hover {
     opacity: 1;
     transform: scale(1.03);
 }
-
 
 /* ------------- ABOUT SECTION ------------- */
 
@@ -397,9 +395,8 @@ header .slideshow-container {
     background-color: #FFF;
 }
 
-
-
 /* flex box is taking care of some of the sizing of the image for us (implicitily) */
+
 .card img {
     width: 100%;
     /* https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin0-auto */
@@ -413,9 +410,68 @@ header .slideshow-container {
     padding: 5%;
 }
 
+/* ----------------------------------------------- */
+
+/* DRINKS.HTML BEGIN */
 
 /* ----------------------------------------------- */
+
+/* We want the nav bar on top of the image.  We don't really need this rule beacuse it is already set all the way at the top. */
+
+.drinks-page-body nav {
+    position: absolute;
+}
+
+.drinks-page-body header {
+    position: relative;
+}
+
+.drinks-page-body header .hero-title {
+    position: absolute;
+    color: #FFF;
+    z-index: 5555555;
+}
+
+.drinks-page-body header .hero-image-container {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+}
+
+.drinks-page-body header .hero-image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: 20000000000;
+}
+
+.drinks-page-body .beer-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drinks-page-body .beer-grid>div {
+    flex: 0 0 33.3333%;
+    background-color: #FFF;
+}
+
+.drinks-page-body .beer-grid>div .header {
+    display: flex;
+}
+
+.drinks-page-body .beer-grid>div .info {
+    display: flex;
+}
+
+.drinks-page-body .beer-grid>div:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ----------------------------------------------- */
+
 /* FOOD.HTML BEGIN */
+
 /* ----------------------------------------------- */
 
 .menu-page-body section:nth-of-type(odd) {
@@ -426,9 +482,8 @@ header .slideshow-container {
     background-color: #EFECCA;
 }
 
-
-
 /* Don't need the nav bar over the slideshow */
+
 .menu-page-body nav {
     position: relative;
 }
@@ -438,16 +493,21 @@ header .slideshow-container {
 }
 
 /* all <div> elements with class "menu-container". */
+
 /* https://css-tricks.com/difference-explicit-implicit-grids/ */
+
 /* https://www.w3.org/TR/css-grid-1/ */
+
 .menu-page-body div.menu-items-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px;
-    grid-auto-rows: 150px; /*switch to auto?*/
+    grid-auto-rows: 150px;
+    /*switch to auto?*/
     grid-gap: 10px;
     border: 2px solid red;
 }
+
 .menu-page-body .menu-items-container .menu-item {
     border: 2px solid pink;
     /*positon .price relative to .menu-item*/
@@ -471,7 +531,7 @@ header .slideshow-container {
     background-color: #FFFFFF;
 }
 
-.mac-n-cheese-your-way-section > div:first-of-type {
+.mac-n-cheese-your-way-section>div:first-of-type {
     padding: 0 15%;
     text-align: center;
 }
@@ -482,7 +542,7 @@ header .slideshow-container {
     border: 2px solid red;
 }
 
-.mac-n-cheese-your-way-section .types > span {
+.mac-n-cheese-your-way-section .types>span {
     align-self: center;
 }
 
@@ -512,7 +572,6 @@ header .slideshow-container {
     position: relative;
     justify-content: center;
     grid-column-gap: 15px;
-    
 }
 
 .dippers-and-sides-section .dippers-and-sides-container {
@@ -526,7 +585,6 @@ header .slideshow-container {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 15px;
     grid-column-gap: 25px;
-
 }
 
 .dippers-and-sides-section .dippers-and-sides-container .dippers-column .dippers span {
@@ -536,11 +594,57 @@ header .slideshow-container {
     line-height: 0%;
 }
 
+.scroll-to {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    border: 2px solid red;
+}
+
+.scroll-to div:first-of-type {
+    position: relative;
+}
+
+.scroll-to i {
+    position: absolute;
+    font-size: 200%;
+    left: 50%;
+    transition: translateX(-50%);
+}
+
+/* https://stackoverflow.com/a/8331169/9599554 */
+.link-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    transition: height 1s ease;
+    overflow: hidden;
+    background: #d5d5d5;
+}
+
+.scroll-to > div:nth-of-type(2) span {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.scroll-to > div:nth-of-type(2) span:hover {
+    color: #FFF;
+}
+
+.link-box-grow {
+    height: 245px;
+}
+
 /* ----------------------------------------------- */
+
 /* EVENTS.HTML BEGIN */
+
 /* ----------------------------------------------- */
 
 /* include <nav> back into the normal flow  */
+
 .events-page-body nav {
     position: relative;
 }
@@ -561,27 +665,42 @@ header .slideshow-container {
 }
 
 /* need the >.  If not, it will look for any first-of-type div (can be levels deep) */
-.daily-happy-hour-section h1, 
-.daily-happy-hour-section > div:nth-of-type(2) {
+
+.daily-happy-hour-section h1, .daily-happy-hour-section>div:nth-of-type(2) {
     text-align: center;
+    border: 2px solid pink;
+}
+
+/* target div right below <h1> */
+
+.daily-happy-hour-section>div:nth-of-type(2) {
+    font-size: 110%;
 }
 
 /* select the one level above grid container */
-.daily-happy-hour-section > div:nth-of-type(4) {
+
+.daily-happy-hour-section>div:nth-of-type(4) {
     background-color: #FFF;
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.daily-happy-hour-section > div:nth-of-type(4) h3 {
+.daily-happy-hour-section>div:nth-of-type(4) h3 {
     text-align: center;
 }
 
 /* select the menu grid  */
-.daily-happy-hour-section > div:nth-of-type(4) > div:first-of-type {
+
+.daily-happy-hour-section>div:nth-of-type(4)>div:first-of-type {
     display: grid;
     grid-column-gap: 10%;
     grid-template-columns: 1fr 1fr;
+}
+
+/* only want level one children */
+
+.daily-happy-hour-section>div:nth-of-type(4)>div:first-of-type>div {
+    padding: 0px 20px;
 }
 
 .daily-happy-hour-section .menu-item .name {
@@ -599,21 +718,35 @@ header .slideshow-container {
 }
 
 .late-night-happy-hour-section {
-    background-color: #0FC0DB;
+    background-color: #B7A196;
 }
 
-.late-night-happy-hour-section > div:first-of-type {
+/* target the div right underneath the <h1> tag */
+
+.late-night-happy-hour-section>div:first-of-type {
     text-align: center;
+    padding-top: 25px;
+    font-size: 110%;
 }
 
 .late-night-happy-hour-section .row {
     display: flex;
+    /* need to give explicit height for us to be able to give height percentages to its children */
     height: 50vh;
-   
 }
 
-.late-night-happy-hour-section .row div > div:first-child {
+/* target both prices in the row */
+
+.late-night-happy-hour-section .row div>div:first-child>div:first-child {
+    font-size: 450%;
     border: 2px solid red;
+}
+
+/* target the description in the row */
+
+.late-night-happy-hour-section .row div>div:first-child>div:nth-child(2) {
+    border: 2px solid green;
+    text-align: center;
 }
 
 .late-night-happy-hour-section .shot {
@@ -621,6 +754,7 @@ header .slideshow-container {
     flex: 0 0 50%;
     /* of its container (parent) */
     height: 100%;
+    border: 2px solid yellow;
 }
 
 .late-night-happy-hour-section .shot div {
@@ -628,7 +762,8 @@ header .slideshow-container {
 }
 
 /* https://stackoverflow.com/a/22429853/9599554 */
-.late-night-happy-hour-section .shot img{
+
+.late-night-happy-hour-section .shot img {
     margin-left: auto;
     margin-right: 50px;
 }
@@ -641,23 +776,28 @@ header .slideshow-container {
     border: 2px solid blue;
 }
 
-/* https://stackoverflow.com/a/22429853/9599554 */
-.late-night-happy-hour-section .beer img {
-    margin-left: auto;    
+.late-night-happy-hour-section .beer div {
+    align-self: center;
 }
 
+/* https://stackoverflow.com/a/22429853/9599554 */
+
+.late-night-happy-hour-section .beer img {
+    margin-left: auto;
+}
 
 .events-page-body .weekly-specials-section .row {
     display: flex;
 }
 
-.events-page-body .weekly-specials-section .row > div {
+.events-page-body .weekly-specials-section .row>div {
     flex: 0 0 33.3333%;
 }
 
-
 /* ----------------------------------------------- */
+
 /* CONTACT.HTML BEGIN */
+
 /* ----------------------------------------------- */
 
 .contact-page-body header {
@@ -667,7 +807,6 @@ header .slideshow-container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/outside_view.jpg);
     /*We don't want a gradient.  We want just a color so we make it black to black.  We also don't want a pure black, so we will edit the transparency */
     background-attachment: fixed;
-
 }
 
 .contact-page-body .hero-text-wrapper {
@@ -678,10 +817,7 @@ header .slideshow-container {
     color: #FFF;
 }
 
-.contact-page-body h1 {
-    
-}
-
+.contact-page-body h1 {}
 
 .contact-page-body .hero-text-wrapper .hero-text {
     width: 75%;
@@ -690,7 +826,7 @@ header .slideshow-container {
 }
 
 .contact-page-body .hero-text-wrapper .hero-text h1 {
-   margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 .contact-page-body .fa-arrow-down {
@@ -705,14 +841,12 @@ header .slideshow-container {
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: #54494B;
-
 }
 
-.contact-form-section h3 {
-
-}
+.contact-form-section h3 {}
 
 /* center grid container */
+
 .form-container-wrapper {
     display: flex;
     justify-content: center;
@@ -750,7 +884,6 @@ header .slideshow-container {
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background-size .5s, color .5s;
-
     margin: 0 auto;
 }
 
